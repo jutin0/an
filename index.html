@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alarma y Recordatorio Personalizados</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Alarma y Recordatorio Personalizados</h1>
+    <div id="alarmSection" class="section">
+      <h2>Alarma Personalizada</h2>
+      <input type="time" id="alarmTime">
+      <button onclick="setAlarm()">Establecer Alarma</button>
+      <div class="recorder">
+        <button onclick="startRecording('alarm')">Grabar Mensaje</button>
+        <button onclick="stopRecording('alarm')">Detener Grabación</button>
+        <audio id="alarmAudio" controls style="display:none;"></audio>
+      </div>
+      <button id="startAlarmButton" style="display:none;" onclick="startAlarm()">Iniciar Alarma</button>
+      <button id="stopAlarmButton" style="display:none;" onclick="stopAlarm()">Detener Alarma</button>
+    </div>
+    <div id="reminderSection" class="section">
+      <h2>Recordatorio</h2>
+      <div class="recorder">
+        <button onclick="startRecording('reminder')">Grabar Recordatorio</button>
+        <button onclick="stopRecording('reminder')">Detener Grabación</button>
+        <audio id="reminderAudio" controls style="display:none;"></audio>
+      </div>
+      <button id="startReminderButton" onclick="startReminder()">Iniciar Recordatorio</button>
+      <button id="stopReminderButton" style="display:none;" onclick="stopReminder()">Detener Recordatorio</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
